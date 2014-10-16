@@ -1,11 +1,12 @@
 public class Basechar {
 
-	private int HP, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
+	private int HP, Pwr, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range, accuracy;
 	private String name;
 
 	public Basechar(String charName) {
 		name = charName;
 		HP = 15;
+		Pwr = 15;
 		Atk = 10;
 		Def = 10;
 		MAtk = 10;
@@ -15,11 +16,13 @@ public class Basechar {
 		Lv = 1;
 		sight = 3; // How far can one see
 		range = 1; // Will later be written as a function of weapon
+		accuracy = 0.6;
 	}
 
 	public Basechar() {
 		name = "Kevin";
 		HP = 15;
+		Pwr = 15;
 		Atk = 10;
 		Def = 10;
 		MAtk = 10;
@@ -29,6 +32,7 @@ public class Basechar {
 		Lv = 1;
 		sight = 3; // How far can one see
 		range = 1; // Will later be written as a function of weapon
+		accuracy = 0.6;
 	}
 
 	public int getHP() {
@@ -42,8 +46,34 @@ public class Basechar {
 	public void BaseAttack (Basechar other) {
 		Random chanceToHit = new Random();
 
-		if (chanceToHit.nextFloat() < (0.6 + 0.05 * Lv)) {
+		if (chanceToHit.nextFloat() < accuracy) {
 			other.HP = other.HP - Atk;
+		}
+	}
+
+	public void updateStats() {
+		// Update stat when levelled
+	}
+
+	public void die() {
+		System.out.println("GG YOU DIE!");
+		
+		String yeshno = "";
+
+		while (yeshno.equals("y") or yeshno.equals("n")) {
+			System.out.println("Do you want to see your stats? ");
+			
+			Scanner sc = new Scanner(System.in);
+
+			yeshno = sc.nextLine();
+		}
+
+		if (yeshno.equals("y")) {
+			// Print all stats I guess
+		}
+
+		else {
+			System.out.println("okay see ya!");
 		}
 	}
 }
