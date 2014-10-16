@@ -2,6 +2,9 @@ public class Basechar {
 
 	private int HP, Pwr, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range, accuracy;
 	private String name;
+	private Weapon wielded = new Weapon();
+	private Weapon quivered = new Weapon();
+	private Armor wearing = new Armor();
 
 	public Basechar(String charName) {
 		name = charName;
@@ -43,16 +46,56 @@ public class Basechar {
 		HP = newHP;
 	}
 
+	public void setPwr(int newPwr) {
+		Pwr = newPwr;
+	}
+
+	public void setAtk(int newAtk) {
+		Atk = newAtk;
+	}
+
+	public void setDef(int newDef) {
+		Def = newDef;
+	}
+
+	public void setMAtk(int newMAtk) {
+		MAtk = newMAtk;
+	}
+
+	public void setMDef(int newMDef) {
+		MDef = newMDef;
+	}
+
+	public void setStamina(int newStamina) {
+		Stamina = newStamina;
+	}
+
+	public void setConst(int newConst) {
+		Const = newConst;
+	}
+
+	public void setLv(int newLv) {
+		Lv = newLv;
+	}
+
+	public void sight(int newSight) {
+		sight = newSight;
+	}
+
+	public void range(int newRange) {
+		range = newRange;
+	}
+
+	public void accuracy(int newAccuracy) {
+		accuracy = newAccuracy;
+	}
+
 	public void BaseAttack (Basechar other) {
 		Random chanceToHit = new Random();
 
 		if (chanceToHit.nextFloat() < accuracy) {
 			other.HP = other.HP - Atk;
 		}
-	}
-
-	public void updateStats() {
-		// Update stat when levelled
 	}
 
 	public void die() {
