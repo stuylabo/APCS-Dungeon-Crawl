@@ -74,6 +74,12 @@ public class Basechar {
 		Const = newConst;
 	}
 
+    // Added a getLv to use in MageEncounter
+
+    public int getLv(){
+	return Lv;
+    }
+
 	public void setLv(int newLv) {
 		Lv = newLv;
 	}
