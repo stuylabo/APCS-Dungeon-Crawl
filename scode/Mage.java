@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class Mage {
+public class Mage extends Basechar{
     
-    private int PwrBoost, MAtkBoost, sightboost;
+    private int PwrBoost, MAtkBoost, sightboost, Pwr;
     private String name;
     // Don't know how to make lists yet so we might have to do a separate variable for each spell
     private String spells = "Energy Bolt";
@@ -14,18 +14,18 @@ public class Mage {
 
     public Mage(String name){
         this.name = name;
-	setPwr( Pwr + PwrBoost );
+	Pwr = super.getPwr() +  PwrBoost;
     }
-
+   
     public String MageEncounter(Basechar other) {
 	System.out.println("Do you want to 1) FIGHT or 2) RUN ?");
-	int confirmation = "";
+	int confirmation;
 	Scanner sc = new Scanner(System.in);
 	confirmation = sc.nextInt();
 	if (confirmation == 2){
 	    Random chanceToRun = new Random();
 	    double runChance = 0.5 - ( ( other.getLv() - this.getLv() ) / 10.00 );
-	    if (chanceToRun >= runChance) {
+	    if (chanceToRun.nextDouble() >=  runChance) {
 		String end = "You successfully ran away!";
 		return end;
 	    }
@@ -36,12 +36,12 @@ public class Mage {
 	}
 	System.out.println("You have entered a fight with " + other);
 	while ( (this.getHP() > 0) && (other.getHP() > 0 ) ) {
-	    System.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
-	    int attack = "";
+	    System.out.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
+	    int attack;
 	    Scanner scatk = new Scanner(System.in);
 	    attack = scatk.nextInt();
-	    if ( attack = 2 ) {
-		System.println("Type your spell: " + spells);
+	    if ( attack == 2 ) {
+		System.out.println("Type your spell: " + spells);
 		String atkspell = "";
 		Scanner scspell = new Scanner(System.in);
 		atkspell = scspell.nextLine();
@@ -49,7 +49,13 @@ public class Mage {
 		    System.out.println(EnergyBoltInfo);
 		    System.out.println("Attack? y or n");
 		    String atkconfirm = "";
-		    Scanner atkconf = new Scanner(system.in);
+		    Scanner atkconf = new Scanner(System.in);
 		    atkconfirm = atkconf.nextLine();
+		}
+	    }
+	}
+    }
+   
+}
 		    
 	    

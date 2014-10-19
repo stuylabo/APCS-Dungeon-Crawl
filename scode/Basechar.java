@@ -1,10 +1,15 @@
+import java.util.*;
+
 public class Basechar {
 
-	private int HP, Pwr, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range, accuracy;
+	private int HP, Pwr, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
+        private double accuracy;
 	private String name;
+   
 	private Weapon wielded = new Weapon();
 	private Weapon quivered = new Weapon();
 	private Armor wearing = new Armor();
+   
 
 	public Basechar(String charName) {
 		name = charName;
@@ -45,14 +50,25 @@ public class Basechar {
 	public void setHP(int newHP) {
 		HP = newHP;
 	}
+        public int getPwr(){
+  	        return Pwr;
+        }
 
 	public void setPwr(int newPwr) {
 		Pwr = newPwr;
 	}
 
+        public int getAtk(){
+	        return Atk;
+        }
+
 	public void setAtk(int newAtk) {
 		Atk = newAtk;
 	}
+
+        public int getDef(){
+	        return Def;
+        }
 
 	public void setDef(int newDef) {
 		Def = newDef;
@@ -92,6 +108,10 @@ public class Basechar {
 		range = newRange;
 	}
 
+        public double getAccuracy(){
+   	        return accuracy;
+        }
+
 	public void accuracy(int newAccuracy) {
 		accuracy = newAccuracy;
 	}
@@ -109,7 +129,7 @@ public class Basechar {
 		
 		String yeshno = "";
 
-		while (yeshno.equals("y") or yeshno.equals("n")) {
+		while (yeshno.equals("y") ||  yeshno.equals("n")) {
 			System.out.println("Do you want to see your stats? ");
 			
 			Scanner sc = new Scanner(System.in);
