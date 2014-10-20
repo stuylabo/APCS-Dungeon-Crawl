@@ -100,11 +100,11 @@ public class Basechar {
 		Lv = newLv;
 	}
 
-	public void sight(int newSight) {
+	public void setSight(int newSight) {
 		sight = newSight;
 	}
 
-	public void range(int newRange) {
+	public void setRange(int newRange) {
 		range = newRange;
 	}
 
@@ -112,7 +112,7 @@ public class Basechar {
    	        return accuracy;
         }
 
-	public void accuracy(int newAccuracy) {
+	public void setAccuracy(int newAccuracy) {
 		accuracy = newAccuracy;
 	}
 
