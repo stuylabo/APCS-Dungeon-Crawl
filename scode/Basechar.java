@@ -137,6 +137,13 @@ public abstract class Basechar {
 	
 	public void die() {
 		System.out.println("GG YOU DIE!");
+		System.out.println("Now let's have a moment of silence to celebrate of your death");
+		
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {}
+		
+		System.out.println("You may now speak.");
 		
 		String yeshno = "";
 
@@ -149,22 +156,18 @@ public abstract class Basechar {
 		}
 
 		if (yeshno.equals("y")) {
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			v
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			System.out.println(name);
-			vSystem.out.println(name);
+			System.out.println("Name = " + name);
+			System.out.println("HP = " + HP);
+			System.out.println("Potential Energy = " + PE);
+			System.out.println("Attack = " + Atk);
+			System.out.println("Defense = " + Def);
+			System.out.println("Magic Attack = " + MAtk);
+			System.out.println("Magic Defense = " + MDef);
+			System.out.println("Stamina = " + Stamina);
+			System.out.println("Constitution = " + Const);
+			System.out.println("Level = " + Lv);
+			System.out.println("Sight = " + sight);
+			System.out.println("Range = " + range);
 		}
 
 		else {
