@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class Basechar {
+public abstract class Basechar {
 
-	private int HP, Pwr, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
+	private int HP, PE, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
         private double accuracy;
 	private String name;
    
@@ -14,7 +14,7 @@ public class Basechar {
 	public Basechar(String charName) {
 		name = charName;
 		HP = 15;
-		Pwr = 15;
+		PE = 15;
 		Atk = 10;
 		Def = 10;
 		MAtk = 10;
@@ -30,7 +30,7 @@ public class Basechar {
 	public Basechar() {
 		name = "Kevin";
 		HP = 15;
-		Pwr = 15;
+		PE = 15;
 		Atk = 10;
 		Def = 10;
 		MAtk = 10;
@@ -42,6 +42,18 @@ public class Basechar {
 		range = 1; // Will later be written as a function of weapon
 		accuracy = 0.6;
 	}
+	
+	public String getWielded() {
+		return wielded.getID();
+	}
+	
+	public String getQuivered() {
+		return quivered.getID();
+	}
+	
+	public String getWearing() {
+		return wearing.getID();
+	}
 
 	public int getHP() {
 		return HP;
@@ -50,16 +62,21 @@ public class Basechar {
 	public void setHP(int newHP) {
 		HP = newHP;
 	}
-        public int getPwr(){
-  	        return Pwr;
+        public int getPE(){
+  	        return PE;
         }
 
-	public void setPwr(int newPwr) {
-		Pwr = newPwr;
+	public void setPE(int newPE) {
+		PE = newPE;
 	}
 
-        public int getAtk(){
-	        return Atk;
+        public int getAtk(boolean yesRange){ // yesRange true adds quivered attack, otherwise add weilded attack
+        	if (yesRange) {
+        		return Atk + quivered.extraAtk(); // quivered weapon adds ranged attack!!
+        	}
+	        else {
+	        	return Atk + wielded.extraAtk(); // wielded weapon adds attack!!
+	        }
         }
 
 	public void setAtk(int newAtk) {
@@ -67,7 +84,7 @@ public class Basechar {
 	}
 
         public int getDef(){
-	        return Def;
+	        return Def + wearing.extraDef(); // Armor adds defense!!
         }
 
 	public void setDef(int newDef) {
@@ -90,11 +107,11 @@ public class Basechar {
 		Const = newConst;
 	}
 
-    // Added a getLv to use in MageEncounter
+	// Added a getLv to use in MageEncounter
 
-    public int getLv(){
-	return Lv;
-    }
+	public int getLv(){
+		return Lv;
+	}
 
 	public void setLv(int newLv) {
 		Lv = newLv;
@@ -116,14 +133,8 @@ public class Basechar {
 		accuracy = newAccuracy;
 	}
 
-	public void BaseAttack (Basechar other) {
-		Random chanceToHit = new Random();
-
-		if (chanceToHit.nextFloat() < accuracy) {
-			other.HP = other.HP - Atk;
-		}
-	}
-
+	public abstract void attack (Basechar other);
+	
 	public void die() {
 		System.out.println("GG YOU DIE!");
 		
@@ -138,7 +149,22 @@ public class Basechar {
 		}
 
 		if (yeshno.equals("y")) {
-			// Print all stats I guess
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			v
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			System.out.println(name);
+			vSystem.out.println(name);
 		}
 
 		else {
