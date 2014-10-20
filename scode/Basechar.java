@@ -147,7 +147,7 @@ public abstract class Basechar {
 		
 		String yeshno = "";
 
-		while (yeshno.equals("y") ||  yeshno.equals("n")) {
+		while (!(yeshno.equals("y") ||  yeshno.equals("n"))) {
 			System.out.println("Do you want to see your stats? ");
 			
 			Scanner sc = new Scanner(System.in);
