@@ -13,15 +13,21 @@ public class Mage extends Basechar{
     }
 
     public Mage(String name){
-        this.name = name;
+        super(name);
 	Pwr = super.getPwr() +  PwrBoost;
     }
    
     public String MageEncounter(Basechar other) {
-	System.out.println("Do you want to 1) FIGHT or 2) RUN ?");
-	int confirmation;
-	Scanner sc = new Scanner(System.in);
-	confirmation = sc.nextInt();
+    	
+    	int confirmation = 0;
+    	
+    	while (! (confirmation == 1 || confirmation == 2)) {
+		System.out.println("Do you want to 1) FIGHT or 2) RUN ?");
+
+		Scanner sc = new Scanner(System.in);
+		confirmation = sc.nextInt();
+    	}
+    	
 	if (confirmation == 2){
 	    Random chanceToRun = new Random();
 	    double runChance = 0.5 - ( ( other.getLv() - this.getLv() ) / 10.00 );
