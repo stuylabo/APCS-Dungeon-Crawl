@@ -79,6 +79,18 @@ public abstract class Basechar {
 	public String getWearing() {
 		return wearing.getID();
 	}
+	
+	public void setWielded(String ID) {
+		wielded = new Weapon(ID);
+	}
+	
+	public void setQuivered(String ID) {
+		quivered = new Weapon(ID);
+	}
+	
+	public void setWearing(String ID) {
+		wearing = new Armor(ID);
+	}
 
 	public int getHP() {
 		return HP;
