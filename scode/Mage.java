@@ -1,47 +1,32 @@
 import java.util.*;
 
-public class Mage extends Basechar{
+public class Akholyte extends Basechar{
     
-    private int PwrBoost, MAtkBoost, sightboost, Pwr;
+    private int PEBoost = 5;
+    private MAtkBoost = 3;
     private String name;
     // Don't know how to make lists yet so we might have to do a separate variable for each spell
     private String spells = "Energy Bolt";
-    private String EnergyBoltInfo = "Base MATK: 5 \n Pwr Cost: 5";
-    
-    public Mage(){
-	super();
+    private int EnergyBoltDMG = 5;
+    private int EnergyBoltCOST = 5;
+    private String EnergyBoltInfo = "Base MATK: " + EnergyBoltDMG + " \n Pwr Cost: " + EnergyBoltCOST;
+    private String Weapons = "Bare Hands, Regents Physics Textbook, Wand";
+    private String[] parts = Weapons.split(",");
+
+    public Akholyte(){
+	super("Kevin", "Regents Physics Textbook", "Wand R", "Body");
     }
 
-    public Mage(String name){
-        super(name);
-	Pwr = super.getPwr() +  PwrBoost;
+    public Akholyte(String name){
+        super(name, "Regents Physics Textbook", "Wand R", "Body");
+	PE = super.getPE() +  PEBoost;
+	MAtk = super.getMAtk() + MAtkBoost;
     }
    
-    public String MageEncounter(Basechar other) {
+    public abstract void attack(Basechar other) {
     	
-    	int confirmation = 0;
-    	
-    	while (! (confirmation == 1 || confirmation == 2)) {
-		System.out.println("Do you want to 1) FIGHT or 2) RUN ?");
-
-		Scanner sc = new Scanner(System.in);
-		confirmation = sc.nextInt();
-    	}
-    	
-	if (confirmation == 2){
-	    Random chanceToRun = new Random();
-	    double runChance = 0.5 - ( ( other.getLv() - this.getLv() ) / 10.00 );
-	    if (chanceToRun.nextDouble() >=  runChance) {
-		String end = "You successfully ran away!";
-		return end;
-	    }
-	    else {
-		String end = "You have failed to run away!";
-		System.out.println(end);
-	    }
-	}
 	System.out.println("You have entered a fight with " + other);
-	while ( (this.getHP() > 0) && (other.getHP() > 0 ) ) {
+	while ( (this.getHP() > 0) || (other.getHP() > 0 ) ) {
 	    System.out.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
 	    int attack;
 	    Scanner scatk = new Scanner(System.in);
@@ -53,12 +38,24 @@ public class Mage extends Basechar{
 		atkspell = scspell.nextLine();
 		if (atkspell.equals("Energy Bolt")) {
 		    System.out.println(EnergyBoltInfo);
-		    System.out.println("Attack? y or n");
-		    String atkconfirm = "";
-		    Scanner atkconf = new Scanner(System.in);
-		    atkconfirm = atkconf.nextLine();
+		    other.setHP( other.getHP() - (this.getMAtk() + EnergyBoltDMG - ( 0.5 * other.getMDef() )) );
+		    this.setPE( PE - EnergyBoltCOST );
 		}
 	    }
+	    else {
+		System.out.println("Choose your weapon: " + Weapons);
+		String atkweapon = "";
+		while (! ( (atkweapon.equals( parts[0] )) || (atkweapon.equals(parts[1])) ) ) {
+		    Scanner scwep = new Scanner(System.in);
+		    atkweapon = scwep.nextLine();
+		}
+		if ( atkweapon.equals( parts[0] )) {
+		    this.setWielded( "Regents Physics Textbook" );
+		    other.setHP( other.getHP - (this.getAtk(yesRange) - (0.5 * other.getDef) ) ); 
+		}
+		if ( atkweapon.equals( parts[1] )) {
+		    other.
+
 	}
     }
    
