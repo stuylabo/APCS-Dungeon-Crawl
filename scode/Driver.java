@@ -18,13 +18,14 @@ public class Driver{
 	String name;
 	sc.nextLine() = name;
 	Akholyte a = new Akhloyte(name);
+	wait(1000);
 
 	System.out.println("You are finally ready to play STUYABLO!");  
-
+	wait(1000);
 	System.out.println("You are on the 10th floor of Sayvetstun. The evil overlord Nomar has confiscated your cellphone! Get it back from him!");
-
+	wait(1000);
 	System.out.println("You must make your way to the 1st floor to find Nomar and defeat him!");
-
+	wait(1000);
 	System.out.println("Oh look, one of Nomar's grunts is standing in your way. Defeat him to move forward!");
 	wait(1000);
 
