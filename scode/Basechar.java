@@ -11,7 +11,7 @@ public abstract class Basechar {
 	private Armor wearing;
    
 
-	public Basechar(String charName, String wieldedID, String qiveredID, String wearingID) {
+	public Basechar(String charName, String wieldedID, String quiveredID, String wearingID) {
 		name = charName;
 		HP = 15;
 		PE = 15;
