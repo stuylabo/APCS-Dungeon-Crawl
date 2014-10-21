@@ -33,6 +33,10 @@ public class Weapon {
       extraRange = 0;
       //ID = "Bare Hands"
     }
+    else if (WeapID.equals("Regents Physics Textbook")) {
+      extraAtk = 1;
+      extraRange = 1;
+    }
   }
   
   public String getID() {
