@@ -1,14 +1,13 @@
-import java.io.*;
 import java.util.*;
 
-public class Moran extends Basechar{
+public class Nomar extends Basechar{
     private String name;
     private int sight, HP, level, Atk;             
     private double intimidation;
 
-    public Moran(){
+    public Nomar(){
 	super();
-	name = "The Great Moran";
+	name = "The Great Nomar";
 	level = super.getLv() + 5;
 	intimidation = 0.5;
 	HP = super.getHP() + 10;
@@ -24,14 +23,22 @@ public class Moran extends Basechar{
 
     public void lecture(Basechar other){
 	Random chanceToHit = new Random();
-	if (chanceToHit.nextDouble() < other.getAccuracy()){
+	if (chanceToHit.nextDouble() < this.getAccuracy()){
 	    other.setHP(other.getHP() - Atk / 2);
 	    other.setAtk(other.getAtk() - 2);
 	    other.setDef(other.getDef() - 2);
 	    }
     }
+    
+    public void instaKill(Basechar other){
+        Random chanceToHit = new Random();
+        if (chanceToHit.nextDouble() < (this.getAccuracy()/2){
+        	other.setHP(0);
+        }
+    
+    }
 
-    public void MoranEncounter(Basechar other){
+    public void NomarEncounter(Basechar other){
 	String encounter = "";  
 	while (encounter != "over"){
 	    if (other.getHP() <= 0){
