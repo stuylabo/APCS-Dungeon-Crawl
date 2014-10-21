@@ -1,10 +1,11 @@
 public class Weapon {
   
-  private int extraAtk, extraRange;
+  private int extraAtk, extraMAtk, extraRange;
   private String ID;
   
   public Weapon() {
     extraAtk = 0;
+    extraMAtk = 0;
     extraRange = 0;
     ID = "Bare Hands"
   }
@@ -33,11 +34,20 @@ public class Weapon {
       extraRange = 0;
       //ID = "Bare Hands"
     }
-    else if (WeapID.equals("Regents Physics Textbook")) {
+    else if (weapID.equals("Regents Physics Textbook")) {
+      extraAtk = 5;
+      extraRange = 0;
+    }
+    
+    else if (weapID.equals("Wand W") {
       extraAtk = 1;
+      extraRange = 0;
+    }
+    
+    else if (weapID.equals("Wand R") {
+      extraMAtk = 3;
       extraRange = 1;
     }
-  }
   
   public String getID() {
     return ID;
@@ -45,6 +55,11 @@ public class Weapon {
   
   public int getExtraAtk() {
     return extraAtk;
+  }
+  
+  public int getExtraMAtk() {
+    return extraMAtk;
+  }
   }
   
   public int getExtraRange() {
