@@ -46,6 +46,13 @@ public class Nomar extends Basechar{
         }
     
     }
+    
+    public void confiscation(Basechar other){
+    	Random chanceToHit = new Random();
+    	if (chanceToHit.nextDouble() < (this.getAccuracy()) {
+    		other.setWielded("Bare Hands");
+    	}
+    }
 
     public void NomarEncounter(Basechar other){
 	String encounter = "";  
