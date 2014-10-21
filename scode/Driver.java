@@ -1,9 +1,85 @@
 public class Driver{
     public static void main(String[] args){
-	Mage h = new Mage("Harry");
-	Nomar m = new Nomar();
+	System.out.println("Welcome to STUYABLO!");
+	System.out.println("Choose your class:");
+        System.out.println("0) Akholyte or 1) Warrior");
+	
+	Scanner sc = new Scanner(System.in);
+	int choice;
+	sc.nextLine() = choice;	
+	if(choice == 0){
+	    System.out.println("Good choice!");
+	}
+	else{
+	    System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.");
+	}
+	
+	System.out.println("What is your name?");
+	String name;
+	sc.nextLine() = name;
+	Akholyte a = new Akhloyte(name);
 
-	public String MageEncounter(Basechar other) {
+	System.out.println("You are finally ready to play STUYABLO!");  
+
+	System.out.println("You are on the 10th floor of Sayvetstun. The evil overlord Nomar has confiscated your cellphone! Get it back from him!");
+
+	System.out.println("You must make your way to the 1st floor to find Nomar and defeat him!");
+
+	System.out.println("Oh look, one of Nomar's grunts is standing in your way. Defeat him to move forward!");
+	wait(1000);
+
+	System.out.println("dramatic music plays");
+	wait(3000);
+
+	Nomar n = new Nomar("Nomar Grunt");
+	System.out.println("A Nomar grunt challenges you to battle! Will you 0) fight or 1) run?");
+	sc.nextLine() = choice;
+	if(choice == 0){
+	    System.out.println("Good choice!");
+	}
+	else{
+	    System.out.println("Don't be a wimp. You're fighting!");
+	}
+	wait(1000);
+	
+	a.attack(n);
+
+    }
+
+    
+
+
+    public static void wait(int ms){
+	
+	try {
+	    Thread.sleep(ms);
+	} catch (Exception e) {};
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*public String MageEncounter(Basechar other) {
     	
 	    int confirmation = 0;
     	
@@ -111,5 +187,6 @@ public class Driver{
 		}
 	    }
 	}
-    }
+	*/
+    
 }
