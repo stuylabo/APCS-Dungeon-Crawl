@@ -15,6 +15,7 @@ public class Nomar extends Basechar{
     
     public Nomar(String name){
     	super(name);
+    	intimidation = 0.1;
     }
 
     public String getName(){
