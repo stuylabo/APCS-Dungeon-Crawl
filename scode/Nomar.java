@@ -12,6 +12,10 @@ public class Nomar extends Basechar{
 	intimidation = 0.5;
 	HP = super.getHP() + 10;
     }
+    
+    public Nomar(String name){
+    	super(name);
+    }
 
     public String getName(){
 	return name;
