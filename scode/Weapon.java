@@ -13,23 +13,37 @@ public class Weapon {
     
     ID = weapID;
     
-    if (weapID.equals("Longsword") {
+    if (weapID.equals("Longsword W") {
       extraAtk = 5;
       extraRange = 1;
     }
     
-    else if (weapID.equals("Bow and Arrow") {
+    else if (weapID.equals("Bow and Arrow R") {
       extraAtk = 2;
       extraRange = 7;
     }
     
-    else if (weapID.equals("Wand") {
-      extraAtk = 3;
-      extraRange = 5;
+    else if (weapID.equals("Bow and Arrow W") {
+      extraAtk = 0;
+      extraRange = 1;
+    }
+  
+    else if (weapID.equals("Bare Hands") {
+      extraAtk = 0;
+      extraRange = 0;
+      //ID = "Bare Hands"
     }
   }
   
   public String getID() {
     return ID;
+  }
+  
+  public int getExtraAtk() {
+    return extraAtk;
+  }
+  
+  public int getExtraRange() {
+    return extraRange;
   }
 }
