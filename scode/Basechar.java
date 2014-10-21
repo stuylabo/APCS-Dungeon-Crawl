@@ -6,11 +6,30 @@ public abstract class Basechar {
         private double accuracy;
 	private String name;
    
-	private Weapon wielded = new Weapon();
-	private Weapon quivered = new Weapon();
-	private Armor wearing = new Armor();
+	private Weapon wielded;
+	private Weapon quivered;
+	private Armor wearing;
    
 
+	public Basechar(String charName, String wieldedID, String qiveredID, String wearingID) {
+		name = charName;
+		HP = 15;
+		PE = 15;
+		Atk = 10;
+		Def = 10;
+		MAtk = 10;
+		MDef = 10;
+		Stamina = 15; // How much weight can one carry
+		Const = 15; // How fast one heals oneself
+		Lv = 1;
+		sight = 3; // How far can one see
+		range = 1; // Will later be written as a function of weapon
+		accuracy = 0.6;
+		wielded = new Weapon(wieldedID);
+		quivered = new Weapon(quiveredID);
+		wearing = new wearing(wearingID);
+	}
+	
 	public Basechar(String charName) {
 		name = charName;
 		HP = 15;
@@ -25,6 +44,9 @@ public abstract class Basechar {
 		sight = 3; // How far can one see
 		range = 1; // Will later be written as a function of weapon
 		accuracy = 0.6;
+		wielded = new Weapon();
+		quivered = new Weapon();
+		wearing = new wearing();
 	}
 
 	public Basechar() {
@@ -41,6 +63,9 @@ public abstract class Basechar {
 		sight = 3; // How far can one see
 		range = 1; // Will later be written as a function of weapon
 		accuracy = 0.6;
+		wielded = new Weapon();
+		quivered = new Weapon();
+		wearing = new wearing();
 	}
 	
 	public String getWielded() {
@@ -72,37 +97,53 @@ public abstract class Basechar {
 
         public int getAtk(boolean yesRange){ // yesRange true adds quivered attack, otherwise add weilded attack
         	if (yesRange) {
-        		return Atk + quivered.extraAtk(); // quivered weapon adds ranged attack!!
+        		return Atk + quivered.gedExtraAtk(); // quivered weapon adds ranged attack!!
         	}
 	        else {
-	        	return Atk + wielded.extraAtk(); // wielded weapon adds attack!!
+	        	return Atk + wielded.gedExtraAtk(); // wielded weapon adds attack!!
 	        }
         }
-
+        
 	public void setAtk(int newAtk) {
 		Atk = newAtk;
 	}
 
         public int getDef(){
-	        return Def + wearing.extraDef(); // Armor adds defense!!
+	        return Def + wearing.getExtraDef(); // Armor adds defense!!
         }
 
 	public void setDef(int newDef) {
 		Def = newDef;
 	}
+	
+	public int getMAtk() {
+		return MAtk;
+	}
 
 	public void setMAtk(int newMAtk) {
 		MAtk = newMAtk;
 	}
+	
+	public int getMDef() {
+		return MDef + wearing.getExtraMDef();
+	}
 
 	public void setMDef(int newMDef) {
 		MDef = newMDef;
+	}
+	
+	public int getStamina() {
+		return Stamina;
 	}
 
 	public void setStamina(int newStamina) {
 		Stamina = newStamina;
 	}
 
+	public int getConst() {
+		return Const;
+	}
+	
 	public void setConst(int newConst) {
 		Const = newConst;
 	}
@@ -116,10 +157,23 @@ public abstract class Basechar {
 	public void setLv(int newLv) {
 		Lv = newLv;
 	}
+	
+	public int getSight() {
+		return sight;
+	}
 
 	public void setSight(int newSight) {
 		sight = newSight;
 	}
+	
+	public int getRange(boolean yesRange){ // yesRange true adds quivered attack, otherwise add weilded attack
+        	if (yesRange) {
+        		return range + quivered.getExtraRange(); // quivered weapon adds ranged attack!!
+        	}
+	        else {
+	        	return Atk + wielded.getExtraRange(); // wielded weapon adds attack!!
+	        }
+        }
 
 	public void setRange(int newRange) {
 		range = newRange;
