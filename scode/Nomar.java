@@ -34,7 +34,7 @@ public class Nomar extends Basechar{
 	Random IntFactor = new Random();
 	intd = this.getIntimidation;
 	if (chanceToHit.nextDouble() < this.getAccuracy()){
-	    other.setHP(other.getHP() - Atk / 2);
+	    other.setHP(other.getHP() - (this.getAtk(false) - (other.getDef() / 2)));
 	    this.setIntimidation(intd + ((Math.abs(Intfactor - intd)) / 2));
 	    }
     }
