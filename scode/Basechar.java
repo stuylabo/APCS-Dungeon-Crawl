@@ -46,7 +46,7 @@ public abstract class Basechar {
 		accuracy = 0.6;
 		wielded = new Weapon();
 		quivered = new Weapon();
-		wearing = new wearing();
+		wearing = new Wearing();
 	}
 
 	public Basechar() {
@@ -65,7 +65,7 @@ public abstract class Basechar {
 		accuracy = 0.6;
 		wielded = new Weapon();
 		quivered = new Weapon();
-		wearing = new wearing();
+		wearing = new Wearing();
 	}
 	
         public String getName(){
@@ -115,12 +115,15 @@ public abstract class Basechar {
 		PE = newPE;
 	}
 
-        public int getAtk(boolean yesRange){ // yesRange true adds quivered attack, otherwise add weilded attack
+        public int getAtk(boolean yesRange){ 
+// yesRange true adds quivered attack, otherwise add wielded attack
         	if (yesRange) {
-        		return Atk + quivered.gedExtraAtk(); // quivered weapon adds ranged attack!!
+        		return Atk + quivered.gedExtraAtk(); 
+// quivered weapon adds ranged attack!!
         	}
 	        else {
-	        	return Atk + wielded.gedExtraAtk(); // wielded weapon adds attack!!
+	        	return Atk + wielded.gedExtraAtk(); 
+// wielded weapon adds attack!!
 	        }
         }
         
