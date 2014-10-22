@@ -4,13 +4,13 @@ import java.lang.Math;
 
 public class Driver{
     public static void main(String[] args){
+	
 	System.out.println("Welcome to STUYABLO!");
 	wait(1000);
 	System.out.println("Choose your class:");
 	wait(1000);
         System.out.println("0) Akholyte or 1) Warrior");
 	wait(1000);
-	
 	Scanner sc = new Scanner(System.in);
 	String choice;
 	choice = sc.nextLine();
@@ -25,7 +25,7 @@ public class Driver{
 	System.out.println("What is your name?");
 	String name;
 	name = sc.nextLine();
-	Akholyte a = new Akhloyte(name);
+	Akholyte a = new Akholyte(name);
 	wait(1000);
 
 	System.out.println("You are finally ready to play STUYABLO!");  
