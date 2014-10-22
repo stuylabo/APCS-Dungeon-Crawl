@@ -5,16 +5,16 @@ import java.lang.Math;
 public class Driver{
     public static void main(String[] args){
 	System.out.println("Welcome to STUYABLO!");
-	wait(1000);
+	wait(3000);
 	System.out.println("Choose your class:");
 	wait(1000);
         System.out.println("0) Akholyte or 1) Warrior");
 	wait(1000);
 	
 	Scanner sc = new Scanner(System.in);
-	String choice;
-	choice = sc.nextLine();
-	if(choice.equals(0)){
+	int choice;
+	choice = sc.nextInt();
+	if(choice == 0){
 	    System.out.println("Good choice!");
 	}
 	else{
@@ -30,29 +30,29 @@ public class Driver{
 	wait(1000);
 
 	System.out.println("You are finally ready to play STUYABLO!");  
-	wait(1000);
+	wait(3000);
 	System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
-	wait(1000);
+	wait(3000);
 	System.out.println("You must make your way to the 1st floor to find Nomar and defeat him,\nso you can reclaim your cellphone!");
-	wait(1000);
+	wait(3000);
 	System.out.println("Come on now, no time to waste!");
-	wait(1000);
+	wait(3000);
 	System.out.println("running...");
-	wait(1000);
+	wait(3000);
 	System.out.println("running...");
-	wait(2000);
+	wait(3000);
 
 	System.out.println("Oh look, one of Nomar's grunts is standing in your way. Defeat him to move forward!");
-	wait(1000);
-
-	System.out.println("dramatic music plays");
 	wait(3000);
+
+	System.out.println("*dramatic music plays*");
+	wait(5000);
 
 	Nomar n = new Nomar("Nomar Grunt");
 	System.out.println("You have been challenged by a " + n.getName() + "!");
 	System.out.println("Will you \n 0) Fight \n 1) Run ?");
-	choice = sc.nextLine();
-	if(choice.equals(0)){
+	choice = sc.nextInt();
+	if(choice == 0){
 	    System.out.println("Good choice!");
 	}
 	else{
