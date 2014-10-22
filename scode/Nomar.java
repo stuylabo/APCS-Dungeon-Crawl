@@ -35,7 +35,7 @@ public class Nomar extends Basechar{
     public void lecture(Basechar other){
 	Random chanceToHit = new Random();
 	Random IntFactor = new Random();
-	double intd = this.getIntimidation;
+	double intd = this.getIntimidation();
 	if (chanceToHit.nextDouble() < this.getAccuracy()){
 	    System.out.println(this + " gives you a lengthy lecture!");
             wait(1000);
