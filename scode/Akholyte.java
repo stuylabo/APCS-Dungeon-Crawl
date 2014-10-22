@@ -5,7 +5,6 @@ public class Akholyte extends Basechar{
     private int PEBoost = 5;
     private int MAtkBoost = 3;
     private String name;
-    // Don't know how to make lists yet so we might have to do a separate variable for each spell
     //private String spells = "Energy Bolt";
     private int EnergyBoltDMG = 5;
     private int EnergyBoltCOST = 5;
@@ -61,6 +60,7 @@ public class Akholyte extends Basechar{
 		}
 	}
    /*
+   Might be used for later
     public void attack(Basechar other) {
     	System.out.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
 	int attack;
