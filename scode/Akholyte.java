@@ -61,31 +61,6 @@ public class Akholyte extends Basechar{
 		}
 	}
    /*
-import java.util.*;
-import java.lang.Math;
-
-public class Akholyte extends Basechar{
-    
-    private int PEBoost = 5;
-    private int MAtkBoost = 3;
-    private String name;
-    private String spells = "Energy Bolt";
-    private int EnergyBoltDMG = 5;
-    private int EnergyBoltCOST = 5;
-    private String EnergyBoltInfo = "Base MATK: " + EnergyBoltDMG + " \n Pwr Cost: " + EnergyBoltCOST;
-    private String Weapons = "Bare Hands, Regents Physics Textbook, Wand";
-    private String[] parts = Weapons.split(",");
-
-    public Akholyte(){
-	super("Kevin", "Regents Physics Textbook", "Wand R", "Body");
-    }
-
-    public Akholyte(String name){
-        super(name, "Regents Physics Textbook", "Wand R", "Body");
-	PE = super.getPE() +  PEBoost;
-	MAtk = super.getMAtk() + MAtkBoost;
-    }
-   
     public abstract void attack(Basechar other) {
     	System.out.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
 	int attack;
