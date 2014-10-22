@@ -3,7 +3,7 @@ import java.util.*;
 public class Akholyte extends Basechar{
     
     private int PEBoost = 5;
-    private MAtkBoost = 3;
+    private int MAtkBoost = 3;
     private String name;
     // Don't know how to make lists yet so we might have to do a separate variable for each spell
     private String spells = "Energy Bolt";
@@ -51,7 +51,7 @@ public class Akholyte extends Basechar{
 		}
 		if ( atkweapon.equals( parts[0] )) {
 		    this.setWielded( "Regents Physics Textbook" );
-		    other.setHP( other.getHP - (this.getAtk(yesRange) - (0.5 * other.getDef) ) ); 
+		    other.setHP( other.getHP - (this.getAtk(yesRange) - (0.5 * other.getDef() ) )); 
 		}
 		if ( atkweapon.equals( parts[1] )) {
 		    other.
