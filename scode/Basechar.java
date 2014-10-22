@@ -4,6 +4,7 @@ public abstract class Basechar {
 
 	private int HP, PE, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
         private double accuracy;
+        private double spellaccuracy;
 	private String name;
    
 	private Weapon wielded;
