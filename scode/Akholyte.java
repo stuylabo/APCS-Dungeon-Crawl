@@ -5,7 +5,6 @@ public class Akholyte extends Basechar{
     private int PEBoost = 5;
     private int MAtkBoost = 3;
     private String name;
-    // Don't know how to make lists yet so we might have to do a separate variable for each spell
     //private String spells = "Energy Bolt";
     private int EnergyBoltDMG = 5;
     private int EnergyBoltCOST = 5;
