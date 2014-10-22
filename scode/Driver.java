@@ -31,9 +31,9 @@ public class Driver{
 
 	System.out.println("You are finally ready to play STUYABLO!");  
 	wait(1000);
-	System.out.println("You are on the 10th floor of Sayvetstun./nThe evil overlord Nomar has confiscated your cellphone!");
+	System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
 	wait(1000);
-	System.out.println("You must make your way to the 1st floor to find Nomar and defeat him,/nso you can reclaim your cellphone!");
+	System.out.println("You must make your way to the 1st floor to find Nomar and defeat him,\nso you can reclaim your cellphone!");
 	wait(1000);
 	System.out.println("Come on now, no time to waste!");
 	wait(1000);
