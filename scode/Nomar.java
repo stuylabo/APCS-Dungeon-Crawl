@@ -64,7 +64,7 @@ public class Nomar extends Basechar{
 		}
 
 		else {
-			System.out.println(this.getname() + " missed!!");
+			System.out.println(this.getName() + " missed!!");
 		}
 	}
 	
