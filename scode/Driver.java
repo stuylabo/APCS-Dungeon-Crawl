@@ -3,7 +3,7 @@ import java.util.*;
 import java.lang.Math;
 
 public class Driver{
-    public static int main(String[] args){
+    public static void main(String[] args){
 	System.out.println("Welcome to STUYABLO!");
 	wait(1000);
 	System.out.println("Choose your class:");
@@ -77,7 +77,7 @@ public class Driver{
 
 	if (a.getHP() == 0) {
 		a.die();
-		return 0;
+		return;
 	}
 	
         /*
@@ -96,7 +96,7 @@ public class Driver{
 	wait(3000);
 	System.out.println("To be continued.....");
 	
-	return 0;
+	return;
 
     }
 

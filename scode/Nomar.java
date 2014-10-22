@@ -55,11 +55,11 @@ public class Nomar extends Basechar{
 		}
 	}
 
-	public static void basicAttack(Basechar other) {
+	public void basicAttack(Basechar other) {
 		if (this.toHit(1)) {
-			int damage = getAtk(false) - (other.getDef() / 2);
+			int damage = this.getAtk(false) - (other.getDef() / 2);
 			other.setHP(other.getHP() - damage);
-			System.out.println("The " + getName() + " landed a hit!");
+			System.out.println("The " + this.getName() + " landed a hit!");
 			System.out.println("It inflicted " + damage + " damage!!");
 		}
 
@@ -68,11 +68,11 @@ public class Nomar extends Basechar{
 		}
 	}
 	
-    public static void lecture(Basechar other){
+    public void lecture(Basechar other){
 
 		Random chanceToHit = new Random();
 		Random IntFactor = new Random();
-		intd = this.getIntimidation;
+		double intd = this.getIntimidation();
 		
 		if (chanceToHit.nextDouble() < this.getAccuracy()){
 	    	System.out.println(this + " gives you a lengthy lecture");
@@ -86,7 +86,7 @@ public class Nomar extends Basechar{
 		}
     }
     
-    public static void instaKill(Basechar other){
+    public void instaKill(Basechar other){
         Random chanceToHit = new Random();
         if (chanceToHit.nextDouble() < (this.getAccuracy() * 0.3)){
         	System.out.println(getName() + " calls your parents");
@@ -100,16 +100,16 @@ public class Nomar extends Basechar{
     
     }
     
-    public static void confiscation(Basechar other){
+    public void confiscation(Basechar other){
     	Random chanceToHit = new Random();
     	if (chanceToHit.nextDouble() < (this.getAccuracy())) {
     		if (other.getWielded().equals("Bare Hands")) {
-    			System.out.println(this + " uses confiscate");
+    			System.out.println(this.getName() + " uses confiscate");
     			wait(1000);
     			System.out.println("...but you had nothing on you");
     		}
     		else{
-    		        System.out.println(this + " confiscates your " + other.getWielded());
+    		        System.out.println(this.getName() + " confiscates your " + other.getWielded());
     		        other.setWielded("Bare Hands");	
     		}
     		
