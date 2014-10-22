@@ -7,29 +7,29 @@ public class Weapon {
     extraAtk = 0;
     extraMAtk = 0;
     extraRange = 0;
-    ID = "Bare Hands"
+    ID = "Bare Hands";
   }
   
   public Weapon(String weapID) {
     
     ID = weapID;
     
-    if (weapID.equals("Longsword W") {
+    if (weapID.equals("Longsword W")) {
       extraAtk = 5;
       extraRange = 1;
     }
     
-    else if (weapID.equals("Bow and Arrow R") {
+    else if (weapID.equals("Bow and Arrow R")) {
       extraAtk = 2;
       extraRange = 7;
     }
     
-    else if (weapID.equals("Bow and Arrow W") {
+    else if (weapID.equals("Bow and Arrow W")) {
       extraAtk = 0;
       extraRange = 1;
     }
   
-    else if (weapID.equals("Bare Hands") {
+    else if (weapID.equals("Bare Hands")) {
       extraAtk = 0;
       extraRange = 0;
       //ID = "Bare Hands"
@@ -39,15 +39,16 @@ public class Weapon {
       extraRange = 0;
     }
     
-    else if (weapID.equals("Wand W") {
+    else if (weapID.equals("Wand W")) {
       extraAtk = 1;
       extraRange = 0;
     }
     
-    else if (weapID.equals("Wand R") {
+    else if (weapID.equals("Wand R")) {
       extraMAtk = 3;
       extraRange = 1;
     }
+  }
   
   public String getID() {
     return ID;
@@ -60,7 +61,7 @@ public class Weapon {
   public int getExtraMAtk() {
     return extraMAtk;
   }
-  }
+
   
   public int getExtraRange() {
     return extraRange;
