@@ -40,7 +40,7 @@ public class Nomar extends Basechar{
 	    System.out.println(this + " gives you a lengthy lecture");
             wait(1000);
 	    other.setHP(other.getHP() - (this.getAtk(false) - (other.getDef() / 2)));
-	    this.setIntimidation(intd + ((Math.abs(Intfactor - intd)) / 2));
+	    this.setIntimidation(intd + ((Math.abs(Intfactor.nextDouble() - intd)) * 0.5));
 	    }
 	else{
  	    System.out.println(this + " tries to lecture you but you can't hear him over your blasting headphones");
@@ -49,7 +49,7 @@ public class Nomar extends Basechar{
     
     public void instaKill(Basechar other){
         Random chanceToHit = new Random();
-        if (chanceToHit.nextDouble() < (this.getAccuracy()/3){
+        if (chanceToHit.nextDouble() < (this.getAccuracy() * 0.3)){
         	System.out.println(this + " calls your parents");
         	wait(1000);
         	other.setHP(0);
