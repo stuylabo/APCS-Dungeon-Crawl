@@ -48,7 +48,7 @@ public class Driver{
 	wait(3000);
 
 	Nomar n = new Nomar("Nomar Grunt");
-	System.out.println("You have been challenged by a"+n+"!");
+	System.out.println("You have been challenged by a "+n+" !");
 	System.out.println("Will you 0) Fight or 1) Run ?");
 	choice = sc.nextLine();
 	if(choice.equals(0)){
