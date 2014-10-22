@@ -12,9 +12,9 @@ public class Driver{
 	wait(1000);
 	
 	Scanner sc = new Scanner(System.in);
-	int choice;
-	choice = sc.nextInt();
-	if(choice == 0){
+	String choice;
+	choice = sc.nextLine();
+	if(choice.equals("0")){
 	    System.out.println("Good choice!");
 	}
 	else{
@@ -51,8 +51,8 @@ public class Driver{
 	Nomar n = new Nomar("Nomar Grunt");
 	System.out.println("You have been challenged by a " + n.getName() + "!");
 	System.out.println("Will you \n 0) Fight \n 1) Run ?");
-	choice = sc.nextInt();
-	if(choice == 0){
+	choice = sc.nextLine();
+	if(choice.equals("0")){
 	    System.out.println("Good choice!");
 	}
 	else{
