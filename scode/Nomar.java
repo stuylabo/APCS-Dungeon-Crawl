@@ -37,25 +37,25 @@ public class Nomar extends Basechar{
 	Random IntFactor = new Random();
 	intd = this.getIntimidation;
 	if (chanceToHit.nextDouble() < this.getAccuracy()){
-	    System.out.println(this + " gives you a lengthy lecture");
+	    System.out.println(this + " gives you a lengthy lecture!");
             wait(1000);
 	    other.setHP(other.getHP() - (this.getAtk(false) - (other.getDef() / 2)));
 	    this.setIntimidation(intd + ((Math.abs(Intfactor.nextDouble() - intd)) * 0.5));
 	    }
 	else{
- 	    System.out.println(this + " tries to lecture you but you can't hear him over your blasting headphones");
+ 	    System.out.println(this + " tries to lecture you but you can't hear him over your blasting headphones.");
 	}
     }
     
     public void instaKill(Basechar other){
         Random chanceToHit = new Random();
         if (chanceToHit.nextDouble() < (this.getAccuracy() * 0.3)){
-        	System.out.println(this + " calls your parents");
+        	System.out.println(this + " calls your parents!!!");
         	wait(1000);
         	other.setHP(0);
         }
         else{
-        	System.out.println(this + " calls your parents but no one answers");
+        	System.out.println(this + " calls your parents but no one answers.");
         	wait(1000);
         }
     
@@ -65,12 +65,14 @@ public class Nomar extends Basechar{
     	Random chanceToHit = new Random();
     	if (chanceToHit.nextDouble() < (this.getAccuracy()) {
     		if (other.getWielded().equals("Bare Hands"){
-    			System.out.println(this + " uses confiscate");
-    			wait(1000);
-    			System.out.println("...but you had nothing on you");
+    			System.out.println(this + " uses confiscation!");
+    			wait(2000);
+    			System.out.println("...but you had nothing on you.");
     		}
     		else{
-    		        System.out.println(this + " confiscates your " + other.getWielded());
+    		        System.out.println(this + " confiscates your " + other.getWielded() + "!");
+    		        wait(1000);
+    		        System.out.println("Nooo!!! That was your last " + other.getWielded() + "!");
     		        other.setWielded("Bare Hands");	
     		}
     		
