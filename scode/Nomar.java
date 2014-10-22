@@ -64,8 +64,16 @@ public class Nomar extends Basechar{
     public void confiscation(Basechar other){
     	Random chanceToHit = new Random();
     	if (chanceToHit.nextDouble() < (this.getAccuracy()) {
-    		System.out.println(this + " confiscates your " + other.getWielded());
-    		other.setWielded("Bare Hands");
+    		if (other.getWielded().equals("Bare Hands"){
+    			System.out.println(this + " uses confiscate");
+    			wait(1000);
+    			System.out.println("...but you had nothing on you");
+    		}
+    		else{
+    		        System.out.println(this + " confiscates your " + other.getWielded());
+    		        other.setWielded("Bare Hands");	
+    		}
+    		
     	}
     }
 }
