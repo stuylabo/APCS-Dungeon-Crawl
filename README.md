@@ -1,4 +1,4 @@
 APCS-Dungeon-Crawl
 ==================
 
-Dungeon crawl game design
+Yicheng Wong, Kevin Yan, Sally Bao, Johnny So
