@@ -35,12 +35,12 @@ public class Nomar extends Basechar{
     public void lecture(Basechar other){
 	Random chanceToHit = new Random();
 	Random IntFactor = new Random();
-	intd = this.getIntimidation;
+	double intd = this.getIntimidation();
 	if (chanceToHit.nextDouble() < this.getAccuracy()){
 	    System.out.println(this + " gives you a lengthy lecture!");
             wait(1000);
 	    other.setHP(other.getHP() - (this.getAtk(false) - (other.getDef() / 2)));
-	    this.setIntimidation(intd + ((Math.abs(Intfactor.nextDouble() - intd)) * 0.5));
+	    this.setIntimidation(intd + ((Math.abs(IntFactor.nextDouble() - intd)) * 0.5));
 	    }
 	else{
  	    System.out.println(this + " tries to lecture you but you can't hear him over your blasting headphones.");
