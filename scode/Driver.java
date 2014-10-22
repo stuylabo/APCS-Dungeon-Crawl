@@ -1,22 +1,29 @@
+import java.io.*;
+import java.util.*;
+
 public class Driver{
     public static void main(String[] args){
 	System.out.println("Welcome to STUYABLO!");
+	wait(1000);
 	System.out.println("Choose your class:");
+	wait(1000);
         System.out.println("0) Akholyte or 1) Warrior");
+	wait(1000);
 	
 	Scanner sc = new Scanner(System.in);
-	int choice;
-	sc.nextLine() = choice;	
-	if(choice == 0){
+	String choice;
+	choice = sc.nextLine();
+	if(choice.equals(0)){
 	    System.out.println("Good choice!");
 	}
 	else{
 	    System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.");
 	}
-	
+	wait(1000);
+
 	System.out.println("What is your name?");
 	String name;
-	sc.nextLine() = name;
+	name = sc.nextLine();
 	Akholyte a = new Akhloyte(name);
 	wait(1000);
 
@@ -34,8 +41,8 @@ public class Driver{
 
 	Nomar n = new Nomar("Nomar Grunt");
 	System.out.println("A Nomar grunt challenges you to battle! Will you 0) fight or 1) run?");
-	sc.nextLine() = choice;
-	if(choice == 0){
+	choice = sc.nextLine();
+	if(choice.equals(0)){
 	    System.out.println("Good choice!");
 	}
 	else{
@@ -44,19 +51,33 @@ public class Driver{
 	wait(1000);
 	
 	a.attack(n);
+        /*
+	  Should exp gain and leveling up be handled in the attack method? 
+	  If not, how should we handle that? Create a method called "checklevel" in Basechar
+	  and use it to level up the character if they hit a new level?
+	  I really don't think that should be in the driver.
+	  So like after a.attack(n) resolves we should call a.checklevel(n).
+	*/
+
+	System.out.println("Good job! You defeated the Nomar Grunt!");
+	wait(1000);
+	System.out.println("There are still 10 levels to go, however! Clear the rest of the 10th floor and you'll be one step closer to getting back you precious cellphone!");
+	wait(3000);
+	System.out.println("Good luck; you'll need it.");
+	wait(3000);
+	System.out.println("To be continued.....");
+	
 
     }
 
-    
-
-
     public static void wait(int ms){
-	
 	try {
 	    Thread.sleep(ms);
 	} catch (Exception e) {};
-
     }
+
+
+
 
 
 
