@@ -40,23 +40,14 @@ public class Driver{
 	wait(3000);
 
 	Nomar n = new Nomar("Nomar Grunt");
-	System.out.println("A Nomar grunt challenges you to battle! Will you 0) fight or 1) run?");
-	choice = sc.nextLine();
-	if(choice.equals(0)){
-	    System.out.println("Good choice!");
-	}
-	else{
-	    System.out.println("Don't be a wimp. You're fighting!");
-	}
-	wait(1000);
-	
 	a.attack(n);
+	
         /*
 	  Should exp gain and leveling up be handled in the attack method? 
 	  If not, how should we handle that? Create a method called "checklevel" in Basechar
 	  and use it to level up the character if they hit a new level?
 	  I really don't think that should be in the driver.
-	  So like after a.attack(n) resolves we should call a.checklevel(n).
+	  So like after a.attack(n) resolves we should call a.checklevel(n)?
 	*/
 
 	System.out.println("Good job! You defeated the Nomar Grunt!");
