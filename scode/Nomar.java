@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Nomar extends Basechar{
     private String name;
-    private int sight, HP, level, Atk;             
+    private int sight, HP, level;             
     private double intimidation;
 
     public Nomar(){
@@ -49,7 +49,7 @@ public class Nomar extends Basechar{
     
     public void instaKill(Basechar other){
         Random chanceToHit = new Random();
-        if (chanceToHit.nextDouble() < (this.getAccuracy()/2){
+        if (chanceToHit.nextDouble() < (this.getAccuracy()/3){
         	System.out.println(this + " calls your parents");
         	wait(1000);
         	other.setHP(0);
