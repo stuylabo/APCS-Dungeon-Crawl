@@ -60,6 +60,7 @@ public class Akholyte extends Basechar{
 		}
 	}
    /*
+   Might be used for later
     public void attack(Basechar other) {
     	System.out.println("Do you want to attack with 1) Basic ATK or 2) a SPELL?");
 	int attack;
