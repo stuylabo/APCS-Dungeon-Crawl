@@ -29,7 +29,7 @@ public class Driver{
 	a = new Akholyte(name);
 	wait(1000);
 
-	System.out.println("You are finally ready to play STUYABLO!");  
+	System.out.println(a.getName() + ", you are finally ready to play STUYABLO!");  
 	wait(3000);
 	System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
 	wait(3000);
