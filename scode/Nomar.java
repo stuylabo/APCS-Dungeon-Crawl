@@ -24,7 +24,7 @@ public class Nomar extends Basechar{
 	else{
 	    this.setLv(levelFactor + other.getLv());
 	}
-	this.setHP(this.getLv() * 6);
+	this.setHP(this.getLv() * 10);
     }
     
     public double getIntimidation(){

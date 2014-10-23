@@ -15,10 +15,10 @@ public class Driver{
 	String choice;
 	choice = sc.nextLine();
 	if(choice.equals("0")){
-	    System.out.println("Good choice!");
+	    System.out.println("Good choice!\n");
 	}
 	else{
-	    System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.");
+	    System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.i\n");
 	}
 	wait(2000);
 
@@ -28,8 +28,8 @@ public class Driver{
 	Akholyte a;
 	a = new Akholyte(name);
 	wait(1000);
-
-	System.out.println(a + ", you are finally ready to play STUYABLO!");  
+	System.out.println("\n");
+	System.out.println(a + ", you are finally ready to play STUYABLO!\n");  
 	wait(3000);
 	System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
 	wait(3000);
@@ -64,7 +64,7 @@ public class Driver{
 
 	int stage = 0;
 
-	while (!(a.getHP() <= 0 && n.getHP() <= 0)) {
+	while (!(a.getHP() <= 0 || n.getHP() <= 0)) {
 		if (stage == 0) { // You attack
 			a.attack(n);
 			stage = 1;
@@ -74,9 +74,11 @@ public class Driver{
 			n.attack(a);
 			stage = 0;
 		}
-
+		
+		System.out.println();
 		System.out.println("You have " + a.getHP() + " HP left!!");
 		System.out.println("The " + n.getName() + " has " + n.getHP() + " HP left!!");
+		System.out.println();
 	}
 
 	if (a.getHP() == 0) {
