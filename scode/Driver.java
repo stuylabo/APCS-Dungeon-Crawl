@@ -74,6 +74,9 @@ public class Driver{
 			n.attack(a);
 			stage = 0;
 		}
+
+		System.out.println("You have " + a.getHP() + " HP left!!");
+		System.out.println("The " + n.getName() + " has " + n.getHP() + " HP left!!");
 	}
 
 	if (a.getHP() == 0) {
