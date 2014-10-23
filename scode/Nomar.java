@@ -16,15 +16,15 @@ public class Nomar extends Basechar{
     }
 
     public void setStats(Basechar other){
-	Random r = new Random();
-	int levelFactor = r.nextInt(5) - 3;
-	if (levelFactor <= 0){
-	    this.setLv(1);
-	}
-	else{
-	    this.setLv(levelFactor + other.getLv());
-	}
-	this.setHP(this.getLv() * 10);
+		Random r = new Random();
+		int levelFactor = r.nextInt(5) - 3;
+		if (levelFactor <= 0){
+	    	this.setLv(1);
+		}
+		else{
+	    	this.setLv(levelFactor + other.getLv());
+		}
+		this.setHP(this.getLv() * 10);
     }
     
     public double getIntimidation(){
