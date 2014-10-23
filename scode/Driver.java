@@ -20,7 +20,7 @@ public class Driver{
 	else{
 	    System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.");
 	}
-	wait(1000);
+	wait(2000);
 
 	System.out.println("What is your name?");
 	String name;
@@ -29,7 +29,7 @@ public class Driver{
 	a = new Akholyte(name);
 	wait(1000);
 
-	System.out.println(a.getName() + ", you are finally ready to play STUYABLO!");  
+	System.out.println(a + ", you are finally ready to play STUYABLO!");  
 	wait(3000);
 	System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
 	wait(3000);
@@ -49,7 +49,8 @@ public class Driver{
 	wait(5000);
 
 	Nomar n = new Nomar("Nomar Grunt");
-	System.out.println("You have been challenged by a " + n.getName() + "!");
+	n.setStats(a);
+	System.out.println("You have been challenged by a " + n + "!");
 	System.out.println("Will you \n 0) Fight \n 1) Run ?");
 	choice = sc.nextLine();
 	if(choice.equals("0")){
@@ -89,7 +90,7 @@ public class Driver{
 	*/
 
 	System.out.println("Good job! You defeated the Nomar Grunt!");
-	wait(1000);
+	wait(3000);
 	System.out.println("There are still 10 levels to go, however! Clear the rest of the 10th floor and you'll be one step closer to getting back you precious cellphone!");
 	wait(3000);
 	System.out.println("Good luck; you'll need it.");
