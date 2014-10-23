@@ -6,11 +6,11 @@ public class Driver{
     public static void main(String[] args){
 		clearScreen();
 		System.out.println("Welcome to STUYABLO!");
-		wait(3000);
+		wait(2000);
 		System.out.println("Choose your class:");
-		wait(1000);
+		//wait(1000);
        	System.out.println("0) Akholyte or 1) Warrior");
-		wait(1000);
+		//wait(1000);
 	
 		Scanner sc = new Scanner(System.in);
 		String choice;
@@ -21,8 +21,8 @@ public class Driver{
 		else{
 	    	System.out.println("You're a Stuy student. Really?\nYou're an Akhloyte.i\n");
 		}
-		wait(2000);
-		clearScreen();
+		wait(450);
+		//clearScreen();
 		System.out.println("What is your name?");
 		String name;
 		name = sc.nextLine();
@@ -34,15 +34,15 @@ public class Driver{
 		System.out.println(a + ", you are finally ready to play STUYABLO!\n");  
 		wait(3000);
 		System.out.println("You are on the 10th floor of Sayvetstun.\nThe evil overlord Nomar has confiscated your cellphone!");
-		wait(3000);
+		wait(1000);
 		System.out.println("You must make your way to the 1st floor to find Nomar and defeat him,\nso you can reclaim your cellphone!");
-		wait(3000);
+		wait(1000);
 		System.out.println("Come on now, no time to waste!");
-		wait(3000);
+		wait(1000);
 		System.out.println("running...");
-		wait(3000);
+		wait(1000);
 		System.out.println("running...");
-		wait(3000);
+		wait(1000);
 
 		System.out.println("Oh look, one of Nomar's grunts is standing in your way. Defeat him to move forward!");
 		wait(3000);
@@ -62,19 +62,27 @@ public class Driver{
 	    	System.out.println("Don't be a wimp! You're fighting!");
 		}
 
+		wait(3000);
+
 		clearScreen();
 
 		//Actual Encounter
-
+		
 		int stage = 0;
+		int turnCount = 0;
 
 		while (!(a.getHP() <= 0 || n.getHP() <= 0)) {
 
 			clearScreen();
+
+			if (turnCount % ((20 - a.getConst())) == 0) {
+				a.setStamina(a.getStamina() + 2);
+				a.setHP(a.getHP() + 2);
+			}
 			
-			System.out.println("You have " + a.getHP() + " HP!!");
-			System.out.println("The " + n.getName() + " has " + n.getHP() + " HP!!");
-			System.out.println();
+			a.getStatusBar();	
+			//System.out.println("The " + n.getName() + " has " + n.getHP() + " HP!!");
+			//System.out.println();
 
 
 			if (stage == 0) { // You attack
@@ -87,10 +95,12 @@ public class Driver{
 				stage = 0;
 			}
 		
-			System.out.println();
-			System.out.println("You have " + a.getHP() + " HP left!!");
-			System.out.println("The " + n.getName() + " has " + n.getHP() + " HP left!!");
-			System.out.println();
+			//System.out.println();
+			//System.out.println("You have " + a.getHP() + " HP left!!");
+			//System.out.println("The " + n.getName() + " has " + n.getHP() + " HP left!!");
+			//System.out.println();
+
+			turnCount++;
 		}
 
 		if (a.getHP() == 0) {

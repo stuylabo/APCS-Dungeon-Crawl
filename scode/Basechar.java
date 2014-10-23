@@ -3,8 +3,8 @@ import java.util.*;
 public abstract class Basechar {
 
 	private int HP, PE, Atk, Def, MAtk, MDef, Stamina, Const, Lv, sight, range;
-        private double accuracy;
-        private double spellaccuracy;
+    private double accuracy;
+    private double spellaccuracy;
 	private String name;
    
 	private Weapon wielded;
@@ -257,5 +257,9 @@ public abstract class Basechar {
 		else {
 			System.out.println("okay see ya!");
 		}
+	}
+
+	public void getStatusBar() {
+		System.out.println(name + " the Student    HP: " + HP + "    PE: " + PE + "    Stam:" + Stamina + "    Lv." + Lv + "\n");
 	}
 }
